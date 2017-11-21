@@ -1,0 +1,20 @@
+Gradle
+Construire un projet : ./gradle init/build
+Générer de la javadoc : ./gradle javadoc
+Lancer des tests: ./gradle build/test
+-----
+Comportements corrects : 
+who != null ; who= aa | AA| 12
+----------
+
+1.
+Le premier test vérifie le squelette de la réponse du programme
+le second verifie si le who=null est géré
+
+2.Ok -> build/test/report/index.html
+3.On ignore le levage d'exception dû à who=null
+------
+Jacoco
+apply plugin "jacoco"
+./gradlew jacocoTestReport
+
